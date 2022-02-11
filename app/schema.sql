@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS membros;
+
+CREATE TABLE membros (
+    id BIGSERIAL PRIMARY KEY,
+    nome VARCHAR(50),
+    cpf CHAR(11) UNIQUE,
+    data_registro DATE DEFAULT CURRENT_DATE
+);
