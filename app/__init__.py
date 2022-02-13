@@ -7,6 +7,7 @@ from os import getenv
 def create_app(test_config=None) -> Flask:
     app = Flask(__name__, static_folder=None)
     app.config.from_mapping(
+        JSON_SORT_KEYS=False,
         DB_HOSTNAME=getenv("DB_HOSTNAME"),
         DB_DATABASE=getenv("DB_DATABASE"),
         DB_USERNAME=getenv("DB_USERNAME"),
